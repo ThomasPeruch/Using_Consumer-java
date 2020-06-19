@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import entities.Product;
 
@@ -18,7 +19,10 @@ public class Program {
 		list.add(new Product("Cabo HDMI",50.00));
 		list.add(new Product("Headset",200.00));
 		
-		list.forEach(Product::nonStaticPriceUpdate);
+		Consumer<Product> cons = p -> p.setPrice(p.getPrice()*1.1);
+		
+		
+		list.forEach(cons);
 		list.forEach(System.out::println);
 	}
 }
