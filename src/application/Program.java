@@ -18,11 +18,8 @@ public class Program {
 		list.add(new Product("Notebook",1800.00));
 		list.add(new Product("Cabo HDMI",50.00));
 		list.add(new Product("Headset",200.00));
-		
-		Consumer<Product> cons = p -> p.setPrice(p.getPrice()*1.1);
-		
-		
-		list.forEach(cons);
+				
+		list.forEach(p -> p.setPrice(p.getPrice()*1.1));
 		list.forEach(System.out::println);
 	}
 }
