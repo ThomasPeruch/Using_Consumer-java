@@ -25,13 +25,10 @@ public class Product {
 		this.name = name;
 	}
 
-	public static void staticPriceUpdate(Product p){
-		p.setPrice(p.getPrice()*1.1);
+	public void nonStaticPriceUpdate(){
+		setPrice(getPrice()*1.1);
 	}
 	
-	public boolean nonStaticProductPredicate(){
-		return price < 1000;
-	}
 	
 	@Override
 	public String toString() {

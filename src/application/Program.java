@@ -18,7 +18,7 @@ public class Program {
 		list.add(new Product("Cabo HDMI",50.00));
 		list.add(new Product("Headset",200.00));
 		
-		list.forEach(Product::staticPriceUpdate);
+		list.forEach(Product::nonStaticPriceUpdate);
 		list.forEach(System.out::println);
 	}
 }
