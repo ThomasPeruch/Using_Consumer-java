@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import utility.PriceUpdate;
 
 public class Program {
 	
@@ -19,7 +18,7 @@ public class Program {
 		list.add(new Product("Cabo HDMI",50.00));
 		list.add(new Product("Headset",200.00));
 		
-		list.forEach(new PriceUpdate());
+		list.forEach(Product::staticPriceUpdate);
 		list.forEach(System.out::println);
 	}
 }
